@@ -80,3 +80,52 @@ header {
     color: var(--main-color);
     cursor: pointer;
 }
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 8% 60px;
+    gap: 50px;
+    background:
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(0, 170, 255, 0.10),
+            transparent 35%
+        ),
+        var(--bg-color);
+}
+
+.home-content {
+    max-width: 650px;
+}
+
+.home-content h1 {
+    font-size: 55px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.home-content h1 span {
+    color: var(--main-color);
+    text-shadow: 0 0 20px rgba(0, 170, 255, 0.3);
+}
+
+.home-content h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.home-content h2 span {
+    color: var(--light-blue);
+}
+
+.home-content p {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
