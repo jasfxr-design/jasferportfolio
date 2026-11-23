@@ -236,6 +236,27 @@ header {
     text-shadow: 0 0 20px rgba(0, 170, 255, 0.3);
 }
 
+.about {
+    padding: 100px 8%;
+    background: var(--second-bg);
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 
 
 
