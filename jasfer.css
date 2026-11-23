@@ -193,6 +193,52 @@ header {
     color: #050816;
 }
 
+.home-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glow-circle {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    padding: 8px;
+    background: linear-gradient(
+        135deg,
+        var(--main-color),
+        #1e40af,
+        var(--light-blue)
+    );
+    box-shadow:
+        0 0 30px rgba(0, 170, 255, 0.4),
+        0 0 70px rgba(0, 170, 255, 0.15);
+    animation: glow 4s ease-in-out infinite;
+}
+
+.glow-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--bg-color);
+}
+
+.heading {
+     text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+.heading span {
+    color: var(--main-color);
+    text-shadow: 0 0 20px rgba(0, 170, 255, 0.3);
+}
+
+
+
+
 
 
 
