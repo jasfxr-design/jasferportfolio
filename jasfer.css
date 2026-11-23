@@ -129,3 +129,32 @@ header {
     line-height: 1.8;
     margin-bottom: 25px;
 }
+
+.social-icons {
+    display: flex;
+    gap: 18px;
+    margin: 20px 0;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    color: var(--main-color);
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.social-icons a:hover {
+    background: var(--main-color);
+    color: #050816;
+    box-shadow: 0 0 20px var(--main-color);
+    transform: translateY(-5px);
+}
+
+
