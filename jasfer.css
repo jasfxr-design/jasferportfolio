@@ -336,6 +336,52 @@ header {
     color: var(--text-muted);
 }
 
+.skills {
+    padding: 100px 8%;
+    background: var(--bg-color);
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.skill-box {
+    background: var(--second-bg);
+    padding: 35px 25px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    transition: 0.4s;
+}
+
+.skill-box:hover {
+    transform: translateY(-10px);
+    border-color: var(--main-color);
+    box-shadow: 0 0 25px rgba(0, 170, 255, 0.15);
+}
+
+
+.skill-box i {
+    font-size: 50px;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+
+.skill-box h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.skill-box p {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
 
 
 
