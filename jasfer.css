@@ -200,19 +200,22 @@ header {
 }
 
 .glow-circle {
-    width: 350px;
-    height: 350px;
+    width: 450px;
+    height: 450px;
     border-radius: 50%;
     padding: 8px;
+
     background: linear-gradient(
         135deg,
         var(--main-color),
         #1e40af,
         var(--light-blue)
     );
+
     box-shadow:
         0 0 30px rgba(0, 170, 255, 0.4),
         0 0 70px rgba(0, 170, 255, 0.15);
+
     animation: glow 4s ease-in-out infinite;
 }
 
@@ -222,7 +225,7 @@ header {
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid var(--bg-color);
-}
+}   
 
 .heading {
      text-align: center;
@@ -443,6 +446,121 @@ header {
     }
 }
 
+@media (max-width: 1000px) {
+    .home-content h1 {
+        font-size: 45px;
+    }
+
+        .glow-circle {
+        width: 450px;
+        height: 450px;
+    }
+
+        .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        gap: 25px;
+        padding: 30px;
+        background: var(--second-bg);
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 130px 5% 60px;
+    }
+
+    .home-content h1 {
+        font-size: 38px;
+    }
+
+    .home-content h2 {
+        font-size: 24px;
+    }
+
+    .home-content p {
+        font-size: 14px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .glow-circle {
+        width: 230px;
+        height: 230px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img img {
+        width: 230px;
+        height: 230px;
+    }
+
+    .about-info {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .heading {
+        font-size: 32px;
+    }
+
+    section {
+        padding: 80px 5%;
+    }
+}
+
+@media (max-width: 400px) {
+    .home-content h1 {
+        font-size: 30px;
+    }
+
+    .home-content h2 {
+        font-size: 20px;
+    }
+
+    .glow-circle {
+        width: 190px;
+        height: 190px;
+    }
+
+    .social-icons a {
+        width: 38px;
+        height: 38px;
+        font-size: 17px;
+    }
+}
 
 
 

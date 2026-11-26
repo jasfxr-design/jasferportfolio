@@ -1,8 +1,4 @@
 
-/* =========================
-   MOBILE NAVIGATION
-========================= */
-
 const menu = document.getElementById("menu");
 const navLinks = document.getElementById("navLinks");
 
@@ -33,17 +29,13 @@ if (menu && navLinks) {
     });
 }
 
-/* =========================
-   TYPING ANIMATION
-========================= */
+
 
 const typingElement = document.querySelector(".typing");
 
 const professions = [
     "IT Student",
-    "Web Developer",
-    "Programmer",
-    "Future IT Professional"
+    "Aspiring front-end Developer",
 ];
 
 let professionIndex = 0;
@@ -85,10 +77,6 @@ function typeEffect() {
 }
 
 typeEffect();
-
-/* =========================
-   CONTACT FORM
-========================= */
 
 const contactForm = document.getElementById("contactForm");
 
