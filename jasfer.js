@@ -2,7 +2,9 @@ const menu = document.getElementById("menu");
 const navLinks = document.getElementById("navLinks");
 
 if (menu && navLinks) {
+
     menu.addEventListener("click", () => {
+
         navLinks.classList.toggle("active");
 
         const icon = menu.querySelector("i");
@@ -11,10 +13,13 @@ if (menu && navLinks) {
             icon.classList.toggle("fa-bars");
             icon.classList.toggle("fa-xmark");
         }
+
     });
 
     navLinks.querySelectorAll("a").forEach(link => {
+
         link.addEventListener("click", () => {
+
             navLinks.classList.remove("active");
 
             const icon = menu.querySelector("i");
@@ -23,17 +28,20 @@ if (menu && navLinks) {
                 icon.classList.add("fa-bars");
                 icon.classList.remove("fa-xmark");
             }
+
         });
+
     });
+
 }
-
-
 
 const typingElement = document.querySelector(".typing");
 
 const professions = [
     "IT Student",
-    "Aspiring front-end Developer",
+    "Frontend Developer",
+    "Web Developer",
+    "Programmer"
 ];
 
 let professionIndex = 0;
@@ -41,6 +49,7 @@ let characterIndex = 0;
 let deleting = false;
 
 function typeEffect() {
+
     if (!typingElement) return;
 
     const currentText = professions[professionIndex];
@@ -57,11 +66,13 @@ function typeEffect() {
     let speed = deleting ? 50 : 100;
 
     if (!deleting && characterIndex === currentText.length) {
+
         speed = 1500;
         deleting = true;
-    } else if (deleting && characterIndex === 0) {
-        deleting = false;
 
+    } else if (deleting && characterIndex === 0) {
+
+        deleting = false;
         professionIndex++;
 
         if (professionIndex >= professions.length) {
@@ -69,9 +80,11 @@ function typeEffect() {
         }
 
         speed = 500;
+
     }
 
     setTimeout(typeEffect, speed);
+
 }
 
 typeEffect();
@@ -79,12 +92,21 @@ typeEffect();
 const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
+
     contactForm.addEventListener("submit", function(event) {
+
         event.preventDefault();
 
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const message = document.getElementById("message").value;
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        if (name === "" || email === "" || message === "") {
+
+            alert("Please complete all fields.");
+            return;
+
+        }
 
         alert(
             "Thank you, " + name +
@@ -92,6 +114,7 @@ if (contactForm) {
         );
 
         contactForm.reset();
-    });
-}
 
+    });
+
+}
