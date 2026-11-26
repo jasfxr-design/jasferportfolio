@@ -1,4 +1,3 @@
-
 const menu = document.getElementById("menu");
 const navLinks = document.getElementById("navLinks");
 
@@ -14,7 +13,6 @@ if (menu && navLinks) {
         }
     });
 
-    // Close menu after clicking a link
     navLinks.querySelectorAll("a").forEach(link => {
         link.addEventListener("click", () => {
             navLinks.classList.remove("active");
@@ -96,3 +94,4 @@ if (contactForm) {
         contactForm.reset();
     });
 }
+
