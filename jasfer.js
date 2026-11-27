@@ -39,9 +39,7 @@ const typingElement = document.querySelector(".typing");
 
 const professions = [
     "IT Student",
-    "Frontend Developer",
-    "Web Developer",
-    "Programmer"
+    "Aspiring Front-End Developer",
 ];
 
 let professionIndex = 0;
