@@ -27,21 +27,30 @@ body {
 }
 
 header {
-    width: 100%;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 20px;
+    left: 5%;
+    width: 90%;
     z-index: 1000;
-    background: rgba(5, 8, 22, 0.92);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(0, 170, 255, 0.15);
+
+    background: transparent;
+    border: none;
+    backdrop-filter: none;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
+
+    padding: 18px 35px;
+
+    background: rgba(15, 15, 25, 0.95);
+    border: 1px solid rgba(0, 170, 255, 0.15);
+    border-radius: 50px;
+
+    backdrop-filter: blur(15px);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
@@ -58,21 +67,28 @@ header {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 35px;
+    gap: 30px;
+
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links li a {
     text-decoration: none;
     color: var(--text-color);
-    font-size: 15px;
-    font-weight: 500;   
-    transition:  0.3s;
+
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    transition: 0.3s;
 }
 
-.nav-links li a:hover {
+.nav-links li a:hover,
+.nav-links li a.active {
     color: var(--main-color);
-     text-shadow: 0 0 15px var(--main-color);
+    text-shadow: 0 0 15px var(--main-color);
 }
 
 .menu {
@@ -463,8 +479,14 @@ header {
 }
 
 @media (max-width: 768px) {
+
+     header {
+        top: 15px;
+        left: 4%;
+        width: 92%;
+    }
     .navbar {
-        padding: 20px 5%;
+        padding: 18px 25px;
     }
 
     .menu {
@@ -473,19 +495,33 @@ header {
 
     .nav-links {
         position: absolute;
-        top: 75px;
-        left: 0;
-        width: 100%;
-        display: none;
-        flex-direction: column;
-        gap: 25px;
-        padding: 30px;
+        top: 85px;
+        right: 0;
+        left: auto;
+
+        width: 220px;
+        padding: 25px;
+
         background: var(--second-bg);
-        border-bottom: 1px solid var(--border-color);
+        border: 1px solid var(--border-color);
+        border-radius: 20px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+
+        transition: 0.3s;
     }
 
     .nav-links.active {
-        display: flex;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 
     .home {
